@@ -12,30 +12,32 @@ html {
     scroll-padding-top: 85px;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    color: #24344d;
-    background: #ffffff;
-    line-height: 1.7;
+:root {
+    --primary: #800F2F;
+    --secondary: #B51F45;
+    --light: #FCE9EE;
+    --text: #74515C;
+    --cream: #FFF7F5;
+    --dark: #542333;
 }
 
-:root {
-    --primary: #214478;
-    --secondary: #4f83cc;
-    --light: #eaf1fc;
-    --text: #53647b;
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark);
+    background: var(--cream);
+    line-height: 1.7;
 }
 
 
 /* NAVBAR */
 
 header {
-    background: white;
+    background: #FFFFFF;
     padding: 18px 8%;
     position: sticky;
     top: 0;
     z-index: 100;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 12px rgba(128,15,47,0.08);
 }
 
 .navbar {
@@ -62,7 +64,7 @@ header {
 
 .nav-links a {
     text-decoration: none;
-    color: #34445c;
+    color: var(--dark);
     font-size: 14px;
     font-weight: 500;
     transition: 0.3s;
@@ -77,7 +79,7 @@ header {
 
 .hero {
     min-height: 90vh;
-    background: linear-gradient(120deg, #f5f8ff, #e5edfb);
+    background: linear-gradient(120deg, #FFF7F5, #F6DCE3);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -111,6 +113,7 @@ header {
     font-size: 23px;
     margin: 15px 0;
     font-weight: 500;
+    color: var(--dark);
 }
 
 .intro {
@@ -163,6 +166,10 @@ header {
     font-weight: 600;
 }
 
+.social-links a:hover {
+    color: var(--secondary);
+}
+
 .hero-image {
     flex-shrink: 0;
 }
@@ -173,7 +180,7 @@ header {
     object-fit: cover;
     border-radius: 20px;
     border: 7px solid white;
-    box-shadow: 0 15px 35px rgba(33,68,120,0.15);
+    box-shadow: 0 15px 35px rgba(128,15,47,0.18);
 }
 
 
@@ -199,7 +206,7 @@ header {
 }
 
 .light-bg {
-    background: #f5f8ff;
+    background: #FCE9EE;
 }
 
 
@@ -227,7 +234,7 @@ header {
     border-left: 5px solid var(--secondary);
     border-radius: 10px;
     text-align: left;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 20px rgba(128,15,47,0.08);
 }
 
 .education-card h3 {
@@ -263,12 +270,15 @@ header {
     background: white;
     padding: 30px 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    border: 1px solid #F3D2DC;
+    box-shadow: 0 5px 20px rgba(128,15,47,0.06);
     transition: 0.3s;
 }
 
 .skill-card:hover {
     transform: translateY(-7px);
+    background: #FFF0F3;
+    border-color: var(--secondary);
 }
 
 .skill-card h3 {
@@ -294,19 +304,21 @@ header {
     background: white;
     padding: 35px;
     border-radius: 12px;
+    border: 1px solid #F3D2DC;
     text-align: left;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 5px 20px rgba(128,15,47,0.06);
     transition: 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    border-color: var(--secondary);
 }
 
 .project-number {
     font-size: 35px;
     font-weight: 700;
-    color: #c5d8f5;
+    color: #E9B8C7;
 }
 
 .project-card h3 {
@@ -347,7 +359,8 @@ header {
     max-width: 700px;
     margin: 20px auto;
     padding: 25px;
-    background: #f5f8ff;
+    background: #FCE9EE;
+    border-left: 4px solid var(--secondary);
     border-radius: 10px;
     text-align: left;
 }
@@ -365,14 +378,14 @@ header {
 /* CONTACT */
 
 .contact-section {
-    background: linear-gradient(120deg, #214478, #4f83cc);
+    background: linear-gradient(120deg, #800F2F, #B51F45);
     color: white;
     padding: 85px 12%;
     text-align: center;
 }
 
 .contact-section .section-subtitle {
-    color: #d5e4ff;
+    color: #FFD9E3;
 }
 
 .contact-section h2 {
@@ -383,13 +396,17 @@ header {
 .contact-section p {
     max-width: 650px;
     margin: 0 auto 25px;
-    color: #e7efff;
+    color: #FFE5EB;
 }
 
 .contact-section .btn {
     background: white;
     color: var(--primary);
     font-weight: 600;
+}
+
+.contact-section .btn:hover {
+    background: #FCE9EE;
 }
 
 .contact-links {
@@ -404,11 +421,15 @@ header {
     text-decoration: none;
 }
 
+.contact-links a:hover {
+    color: #FFD9E3;
+}
+
 
 /* FOOTER */
 
 footer {
-    background: #172f50;
+    background: #542333;
     color: white;
     text-align: center;
     padding: 20px;
